@@ -25,7 +25,6 @@ class Meal {
   final Complexity complexity;
   final Cost cost;
 
-
   const Meal({
     required this.id,
     required this.categories,
@@ -41,4 +40,27 @@ class Meal {
     required this.complexity,
     required this.cost,
   });
+
+  String get complexityText {
+    switch (complexity) {
+      case Complexity.simple:
+        return 'Simples';
+      case Complexity.medium:
+        return 'Normal';
+      case Complexity.difficult:
+        return 'Difícil';
+    }
+  }
+  String get costText {
+    switch (cost) {
+      case Cost.cheap:
+        return 'Barato';
+      case Cost.fair:
+        return 'Justo';
+      case Cost.expensive:
+        return 'Caro';
+    }
+  }
 }
+
+
